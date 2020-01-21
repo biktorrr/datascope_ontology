@@ -1,0 +1,100 @@
+@prefix       foaf: <http://xmlns.com/foaf/0.1/> .
+@prefix       skos: <http://www.w3.org/2004/02/skos/core#> .
+@prefix        owl: <http://www.w3.org/2002/07/owl#> .
+@prefix       rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix        rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix 	dcterms: <http://purl.org/dc/terms/> .
+@prefix 	pro: <http://purl.org/spar/pro/> .
+@prefix     void: <http://rdfs.org/ns/void#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+@prefix 	dsont: <http://example.org/datascope#> .
+@prefix 	dsx: <http://example.org/datascope/> .
+
+
+# example
+
+dsx:paper1
+	a dsont:Paper;
+	rdfs:label "example paper 1";
+	dsont:published_In dsx:journal1;
+	dsont:has_Datascope dsx:dataScope1.
+
+dsx:journal1 
+	a dsont:Journal;
+	dsont:has_Paper dsx:paper1.
+	
+dsx:dataScope1
+	 a dsont:DataScope;
+	 rdfs:label "Example datascope for paper 1";
+	 dsont:has_Normalization dsx:normalization1;
+	 dsont:has_Modeling dsx:modeling1;
+	 dsont:has_Linking dsx:linking1;
+	 dsont:has_Classification dsx:classification1;
+	 dsont:has_Selection dsx:selection1.
+	 
+dsx:selection1
+	a dsont:Selection ;
+	dsont:has_Dataset dsx:dataset1;
+	dsont:has_Dataset dsx:dataset2.
+	
+dsx:dataset1 
+	a dsont:DataSet;
+	rdfs:label "our first dataset";
+	dsont:has_CollectionDate "2019-01-01"^^xsd:date;
+	dsont:has_Language "English";
+	dsont:has_SelectionCriteria "This dataset was selected by first doing X, then Y";
+	dsont:has_Provenance <http://datasets.org/somedata.rdf> ; #Here i point to an external source
+	dsont:has_Subset <http://datasets.org/somedata.rdf> . #Here i point to an external source
+	
+dsx:dataset1a
+	a dsont:DataSet;
+	rdfs:label "subset 1";
+	dsont:has_CollectionDate "2019-01-02"^^xsd:date;
+	dsont:has_Language "English";
+	dsont:has_SelectionCriteria "We identified a subset used for answering questions about X".
+
+dsx:dataset1b 
+	a dsont:DataSet;
+	rdfs:label "subset 2";
+	dsont:has_CollectionDate "2019-01-03"^^xsd:date;
+	dsont:has_Language "English";
+	dsont:has_SelectionCriteria "We identified a subset used for answering questions about Y".
+
+dsx:dataset2 
+	a dsont:DataSet;
+	rdfs:label "our second dataset";
+	dsont:has_CollectionDate "2019-02-01"^^xsd:date;
+	dsont:has_Language "English";
+	dsont:has_SelectionCriteria "This dataset was selected in a completely different way";
+	dsont:has_Provenance <http://dbpedia.org/somedataotherdata.rdf> . #Here i point to an external source
+
+dsx:normalization1
+	a dsont:Normalization ;
+	dsont:has_Step dsx:normalization1step1;
+	dsont:has_Step dsx:normalization1step2.
+	
+	
+dsx:normalization1step1
+	a dsont:NormalizationStep; # each step gets its own triple
+	rdfs:label "first step" ; 	
+	dsont:has_Method "some method for the first step" .
+	
+	
+dsx:normalization1step2
+	a dsx:NormalizationStep;
+	rdfs:label "second step" ; 	
+	dsont:has_Method "some method for the second step" .
+	
+dsx:linking1
+	a dsont:Linking ;
+	dsont:linkedEntities void:someDataset1.
+		
+dsx:classification1
+	a dsont:Classification ;
+	dsont:has_CategoryScheme dsx:categoryScheme1.
+
+dsx:categoryScheme1 dsont:has_Source <http://example.org/someScheme>. #for now I just point at an external source
+
+
+		
