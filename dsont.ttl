@@ -9,7 +9,7 @@
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
 @prefix prov: <http://www.w3.org/ns/prov#> .
 
-@prefix 	dsont: <http://example.org/datascope#> .
+@prefix 	dsont: <http://w3id.org/datascope#> .
 
 
 
