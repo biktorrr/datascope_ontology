@@ -503,94 +503,124 @@ dsx:datascope11linking1 a dsont:Linking ;
  dsont:published_in  dsx:journal_dig_schol_hum ; 
  dsont:has_datascope  dsx:datascope30 .
 
-dsx:datascope01 dsont:has_selection dsx:selection01sel01 . 
+dsx:datascope01 a dsont:DataScope ;
+dsont:has_selection dsx:selection01sel01 . 
 
 
-dsx:datascope02 dsont:has_selection dsx:selection02sel01 . 
+dsx:datascope02 a dsont:DataScope ;
+ dsont:has_selection dsx:selection02sel01 . 
 
 
-dsx:datascope03 dsont:has_selection dsx:selection03sel01 . 
+dsx:datascope03 a dsont:DataScope ;
+ dsont:has_selection dsx:selection03sel01 . 
 
 
-dsx:datascope04 dsont:has_selection dsx:selection04sel01 . 
+dsx:datascope04 a dsont:DataScope ;
+ dsont:has_selection dsx:selection04sel01 . 
 
 
-dsx:datascope05 dsont:has_selection dsx:selection05sel01 . 
+dsx:datascope05 a dsont:DataScope ;
+ dsont:has_selection dsx:selection05sel01 . 
 
 
-dsx:datascope06 dsont:has_selection dsx:selection06sel01 . 
+dsx:datascope06 a dsont:DataScope ;
+ dsont:has_selection dsx:selection06sel01 . 
 
 
-dsx:datascope07 dsont:has_selection dsx:selection07sel01 . 
+dsx:datascope07 a dsont:DataScope ;
+ dsont:has_selection dsx:selection07sel01 . 
 
 
-dsx:datascope08 dsont:has_selection dsx:selection08sel01 . 
+dsx:datascope08 a dsont:DataScope ;
+ dsont:has_selection dsx:selection08sel01 . 
 
 
-dsx:datascope09 dsont:has_selection dsx:selection09sel01 . 
+dsx:datascope09 a dsont:DataScope ;
+ dsont:has_selection dsx:selection09sel01 . 
 
 
-dsx:datascope10 dsont:has_selection dsx:selection10sel01 . 
+dsx:datascope10 a dsont:DataScope ;
+ dsont:has_selection dsx:selection10sel01 . 
 
 
-dsx:datascope11 dsont:has_selection dsx:selection11sel01 . 
+dsx:datascope11 a dsont:DataScope ;
+ dsont:has_selection dsx:selection11sel01 . 
 
 
-dsx:datascope12 dsont:has_selection dsx:selection12sel01 . 
+dsx:datascope12 a dsont:DataScope ;
+ dsont:has_selection dsx:selection12sel01 . 
 
 
-dsx:datascope13 dsont:has_selection dsx:selection13sel01 . 
+dsx:datascope13 a dsont:DataScope ;
+ dsont:has_selection dsx:selection13sel01 . 
 
 
-dsx:datascope14 dsont:has_selection dsx:selection14sel01 . 
+dsx:datascope14 a dsont:DataScope ;
+ dsont:has_selection dsx:selection14sel01 . 
 
 
-dsx:datascope15 dsont:has_selection dsx:selection15sel01 . 
+dsx:datascope15 a dsont:DataScope ;
+ dsont:has_selection dsx:selection15sel01 . 
 
 
-dsx:datascope16 dsont:has_selection dsx:selection16sel01 . 
+dsx:datascope16 a dsont:DataScope ;
+ dsont:has_selection dsx:selection16sel01 . 
 
 
-dsx:datascope17 dsont:has_selection dsx:selection17sel01 . 
+dsx:datascope17 a dsont:DataScope ;
+ dsont:has_selection dsx:selection17sel01 . 
 
 
-dsx:datascope18 dsont:has_selection dsx:selection18sel01 . 
+dsx:datascope18 a dsont:DataScope ;
+ dsont:has_selection dsx:selection18sel01 . 
 
 
-dsx:datascope19 dsont:has_selection dsx:selection19sel01 . 
+dsx:datascope19 a dsont:DataScope ;
+ dsont:has_selection dsx:selection19sel01 . 
 
 
-dsx:datascope20 dsont:has_selection dsx:selection20sel01 . 
+dsx:datascope20 a dsont:DataScope ;
+ dsont:has_selection dsx:selection20sel01 . 
 
 
-dsx:datascope21 dsont:has_selection dsx:selection21sel01 . 
+dsx:datascope21 a dsont:DataScope ;
+ dsont:has_selection dsx:selection21sel01 . 
 
 
-dsx:datascope22 dsont:has_selection dsx:selection22sel01 . 
+dsx:datascope22 a dsont:DataScope ;
+ dsont:has_selection dsx:selection22sel01 . 
 
 
-dsx:datascope23 dsont:has_selection dsx:selection23sel01 . 
+dsx:datascope23 a dsont:DataScope ;
+ dsont:has_selection dsx:selection23sel01 . 
 
 
-dsx:datascope24 dsont:has_selection dsx:selection24sel01 . 
+dsx:datascope24 a dsont:DataScope ;
+ dsont:has_selection dsx:selection24sel01 . 
 
 
-dsx:datascope25 dsont:has_selection dsx:selection25sel01 . 
+dsx:datascope25 a dsont:DataScope ;
+ dsont:has_selection dsx:selection25sel01 . 
 
 
-dsx:datascope26 dsont:has_selection dsx:selection26sel01 . 
+dsx:datascope26 a dsont:DataScope ;
+ dsont:has_selection dsx:selection26sel01 . 
 
 
-dsx:datascope27 dsont:has_selection dsx:selection27sel01 . 
+dsx:datascope27 a dsont:DataScope ;
+ dsont:has_selection dsx:selection27sel01 . 
 
 
-dsx:datascope28 dsont:has_selection dsx:selection28sel01 . 
+dsx:datascope28 a dsont:DataScope ;
+ dsont:has_selection dsx:selection28sel01 . 
 
 
-dsx:datascope29 dsont:has_selection dsx:selection29sel01 . 
+dsx:datascope29 a dsont:DataScope ;
+ dsont:has_selection dsx:selection29sel01 . 
 
 
-dsx:datascope30 dsont:has_selection dsx:selection30sel01 . 
+dsx:datascope30 a dsont:DataScope ;
+ dsont:has_selection dsx:selection30sel01 . 
 
 dsx:selection01sel01 a dsont:Selection ; 
  dsont:has_dataset  dsx:selection01sel01ds1 . 

@@ -2,158 +2,163 @@
 @prefix      rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
 @prefix       rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
 @prefix   dcterms: <http://purl.org/dc/terms/> .
-@prefix datascope: <https://w3id.org/datascope#> .
+@prefix dsont: <https://w3id.org/datascope#> .
 
 # Named toplevel resources (27)
 
-datascope:Classification
+dsont:DataScope
+	a rdfs:Class ;
+	rdfs:label "Data scope" ;
+	rdfs:subClassOf prov:Entity .
+
+dsont:Classification
 	a rdfs:Class ;
 	rdfs:label "Classification" ;
 	rdfs:subClassOf prov:Entity .
 
-datascope:Dataset
+dsont:Dataset
 	a rdfs:Class ;
 	rdfs:label "Dataset" .
 
-datascope:Linking
+dsont:Linking
 	a rdfs:Class ;
 	rdfs:label "Linking" ;
 	rdfs:subClassOf prov:Entity .
 
-datascope:Modeling
+dsont:Modeling
 	a rdfs:Class ;
 	rdfs:label "Modeling" .
 
-datascope:Normalization
+dsont:Normalization
 	a rdfs:Class ;
 	rdfs:label "Normalization" ;
 	rdfs:subClassOf prov:Entity .
 
-datascope:Paper
+dsont:Paper
 	a rdfs:Class ;
 	rdfs:label "Paper" ;
 	rdfs:subClassOf dcterms:BibliographicResource .
 
-datascope:Selection
+dsont:Selection
 	a rdfs:Class ;
 	rdfs:label "Selection" ;
 	rdfs:subClassOf prov:Entity .
 
-datascope:extraction_method
+dsont:extraction_method
 	a rdf:Property ;
-	rdfs:domain datascope:Dataset ;
+	rdfs:domain dsont:Dataset ;
 	rdfs:label "extraction_method" ;
 	rdfs:range rdfs:Literal .
 
-datascope:has_classification
+dsont:has_classification
 	a rdf:Property ;
-	rdfs:domain rdfs:Resource ;
+	rdfs:domain dsont:DataScope ;
 	rdfs:label "has_classification" ;
-	rdfs:range datascope:Classification .
+	rdfs:range dsont:Classification .
 
-datascope:has_classification_scheme
+dsont:has_classification_scheme
 	a rdf:Property ;
-	rdfs:domain datascope:Classification ;
+	rdfs:domain dsont:Classification ;
 	rdfs:label "has_classification_scheme" ;
 	rdfs:range rdfs:Literal .
 
-datascope:has_collection_date
+dsont:has_collection_date
 	a rdf:Property ;
-	rdfs:domain datascope:Dataset ;
+	rdfs:domain dsont:Dataset ;
 	rdfs:label "has_collection_date" ;
 	rdfs:range rdfs:Literal .
 
-datascope:has_datascope
+dsont:has_datascope
 	a rdf:Property ;
-	rdfs:domain datascope:Paper ;
+	rdfs:domain dsont:Paper ;
 	rdfs:label "has_datascope" ;
-	rdfs:range rdfs:Resource .
+	rdfs:range dsont:DataScope .
 
-datascope:has_dataset
+dsont:has_dataset
 	a rdf:Property ;
-	rdfs:domain datascope:Selection ;
+	rdfs:domain dsont:Selection ;
 	rdfs:label "has_dataset" ;
-	rdfs:range datascope:Dataset .
+	rdfs:range dsont:Dataset .
 
-datascope:has_date
+dsont:has_date
 	a rdf:Property ;
-	rdfs:domain datascope:Dataset ;
+	rdfs:domain dsont:Dataset ;
 	rdfs:label "has_date" ;
 	rdfs:range rdfs:Literal .
 
-datascope:has_extraction_method
+dsont:has_extraction_method
 	a rdf:Property ;
-	rdfs:domain datascope:Dataset ;
+	rdfs:domain dsont:Dataset ;
 	rdfs:label "has_extraction_method" ;
 	rdfs:range rdfs:Literal .
 
-datascope:has_language
+dsont:has_language
 	a rdf:Property ;
-	rdfs:domain datascope:Dataset ;
+	rdfs:domain dsont:Dataset ;
 	rdfs:label "has_language" ;
 	rdfs:range rdfs:Literal .
 
-datascope:has_linking
+dsont:has_linking
 	a rdf:Property ;
-	rdfs:domain rdfs:Resource ;
+	rdfs:domain dsont:DataScope ;
 	rdfs:label "has_linking" ;
-	rdfs:range datascope:Linking .
+	rdfs:range dsont:Linking .
 
-datascope:has_method
+dsont:has_method
 	a rdf:Property ;
 	rdfs:domain rdfs:Resource ;
 	rdfs:label "has_method" ;
 	rdfs:range rdfs:Literal .
 
-datascope:has_modelling
+dsont:has_modelling
 	a rdf:Property ;
-	rdfs:domain rdfs:Resource ;
+	rdfs:domain dsont:DataScope ;
 	rdfs:label "has_modelling" ;
-	rdfs:range datascope:Modeling .
+	rdfs:range dsont:Modeling .
 
-datascope:has_normalization
+dsont:has_normalization
 	a rdf:Property ;
-	rdfs:domain rdfs:Resource ;
+	rdfs:domain dsont:DataScope ;
 	rdfs:label "has_normalization" .
 
-datascope:has_normalization_step
+dsont:has_normalization_step
 	a rdf:Property ;
-	rdfs:domain datascope:Normalization ;
+	rdfs:domain dsont:Normalization ;
 	rdfs:label "has_normalization_step" ;
 	rdfs:range rdfs:Resource .
 
-datascope:has_representation
+dsont:has_representation
 	a rdf:Property ;
-	rdfs:domain datascope:Modeling ;
+	rdfs:domain dsont:Modeling ;
 	rdfs:label "has_representation" ;
 	rdfs:range rdfs:Literal .
 
-datascope:has_selection
+dsont:has_selection
 	a rdf:Property ;
-	rdfs:domain rdfs:Resource ;
+	rdfs:domain dsont:DataScope ;
 	rdfs:label "has_selection" ;
-	rdfs:range datascope:Selection .
+	rdfs:range dsont:Selection .
 
-datascope:has_selection_criteria
+dsont:has_selection_criteria
 	a rdf:Property ;
-	rdfs:domain datascope:Dataset ;
+	rdfs:domain dsont:Dataset ;
 	rdfs:label "has_selection_criteria" ;
 	rdfs:range rdfs:Literal .
 
-datascope:has_subset
+dsont:has_subset
 	a rdf:Property ;
-	rdfs:domain datascope:Dataset ;
+	rdfs:domain dsont:Dataset ;
 	rdfs:label "has_subset" ;
-	rdfs:range datascope:Dataset .
+	rdfs:range dsont:Dataset .
 
-datascope:published_in
+dsont:published_in
 	a rdf:Property ;
-	rdfs:domain datascope:Paper ;
+	rdfs:domain dsont:Paper ;
 	rdfs:label "published_in" ;
 	rdfs:range rdfs:Resource .
 
-datascope:source
+dsont:source
 	a rdf:Property ;
-	rdfs:domain datascope:Dataset ;
+	rdfs:domain dsont:Dataset ;
 	rdfs:label "source" ;
 	rdfs:range rdfs:Literal .
