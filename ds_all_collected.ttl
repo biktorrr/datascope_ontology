@@ -1,0 +1,756 @@
+@prefix       foaf: <http://xmlns.com/foaf/0.1/> .
+@prefix       skos: <http://www.w3.org/2004/02/skos/core#> .
+@prefix        owl: <http://www.w3.org/2002/07/owl#> .
+@prefix       rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix        rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix 	dcterms: <http://purl.org/dc/terms/> .
+@prefix 	pro: <http://purl.org/spar/pro/> .
+@prefix     void: <http://rdfs.org/ns/void#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+@prefix 	dsont:<http://w3id.org/datascope#> .
+@prefix 	dsx: <http://example.org/datascope/> .
+
+
+dsx:selection01sel01ds1 a dsont:Dataset ; 
+ rdfs:label "500M train trips taken in Kansai area of Japan by 6M unique users from 6 different train companies". 
+
+
+dsx:selection02sel01ds1 a dsont:Dataset ; 
+ rdfs:label "Tweets and Facebook posts"; 
+ dsont:source "Twitter and Facebook"; 
+ dsont:has_extraction_method "Twitter's public API and â€œNairobi 2018 social media toolkit" ;
+ dsont:has_collection_date "2018.08.20 to 2018.09.15". 
+
+
+dsx:selection03sel01ds1 a dsont:Dataset ; 
+ rdfs:label "List of countries both developed and developing countries with full set of historical data about central bank policy rate, infation and GDP growth rate."; 
+ dsont:has_selection_criteria ""; 
+ dsont:has_collection_date "2014.04 to 2016.03". 
+
+
+dsx:selection04sel01ds1 a dsont:Dataset ; 
+ rdfs:label "Russian Troll Tweets"; 
+ dsont:source "Twitter"; 
+ dsont:has_language "Mixed"; 
+  dsont:has_extraction_method "Twitter API"; 
+ dsont:has_collection_date "2012.02 to 2018.05". 
+
+
+dsx:selection05sel01ds1 a dsont:Dataset ; 
+ rdfs:label "Divisions data of the Senate contaning how the particular party (i.e. LNP, ALP, AG, NXT, PHON, LDP, FFP, JLN, and DHJP) voted on each of the n items of legislation."; 
+ dsont:source "http://www.aph.gov.au/Parliamentary_Business/Statistics/Senate_StatsNet/General/divisions."; 
+ dsont:has_selection_criteria "Divisions data from the first sitting of the Senate of the 45th Australian Parliament, until the fnal sitting during the 2016 calendar year". 
+
+
+dsx:selection06sel01ds1 a dsont:Dataset ; 
+ rdfs:label "1.9 million tweets from January 2014 to June 2015"; 
+ dsont:source "The Observatory on Social Media database (OSoMe) set up by Indiana University"; 
+  dsont:has_extraction_method "Twitter API"; 
+dsont:has_selection_criteria "Tweets must be from ISIS sympathizers accounts"; 
+ dsont:has_language "Mixed". 
+
+
+dsx:selection07sel01ds1 a dsont:Dataset ; 
+ rdfs:label "2067 unique articlesâ€™ URLs"; 
+   dsont:has_extraction_method "Google with search terms: vaccineâ€‰+â€‰danger, vaccineâ€‰+â€‰harm, vaccineâ€‰+â€‰secret, vaccineâ€‰+â€‰death, vaccineâ€‰+â€‰injury, ";
+ dsont:has_collection_date "2017.05.05". 
+
+
+dsx:selection08sel01ds1 a dsont:Dataset ; 
+ rdfs:label "Official user log data of Mecrari's free app from April 2016 to December 2017 and includes the profile and transaction data for 109,158 banned users and 93,856 non-banned users."; 
+ dsont:source "Mercari, Inc". 
+
+
+dsx:selection09sel01ds1 a dsont:Dataset ; 
+ rdfs:label "Data on more than 180,000 terrorist events"; 
+ dsont:source "Global Terrorism Database (GTD)". 
+
+
+dsx:selection10sel01ds1 a dsont:Dataset ; 
+ rdfs:label "13,000 tweets"; 
+ dsont:source "CAW 2.0 dataset"; 
+ dsont:has_selection_criteria "Must be able to identify social network structure information from data". 
+
+
+dsx:selection11sel01ds1 a dsont:Dataset ; 
+ rdfs:label "Phone calls"; 
+ dsont:source "Undisclosed European service provider"; 
+ dsont:has_selection_criteria "Only users subscribed to service for entire 7 month collection period". 
+
+
+dsx:selection12sel01ds1 a dsont:Dataset ; 
+ rdfs:label "News documents"; 
+ dsont:source "Thomson Reuters News Archive"; 
+ dsont:has_language "English, Japanese, Spanish, French, Chinese". 
+
+
+dsx:selection13sel01ds1 a dsont:Dataset ; 
+ rdfs:label "Eurovision voting data"; 
+ dsont:source "github.com/mantzaris/eurovision". 
+
+
+dsx:selection14sel01ds1 a dsont:Dataset ; 
+ rdfs:label "User IDs from Facebook pages connected to Hong Kong protests of 2014"; 
+ dsont:source "Facebook"; 
+    dsont:has_extraction_method "Web scraping";
+ dsont:has_selection_criteria "The posts with highest amount of likes/comments on a random day of each week in a 52 week period"; 
+ dsont:has_collection_date "Oct/15". 
+
+
+dsx:selection15sel01ds1 a dsont:Dataset ; 
+ rdfs:label "Tweets"; 
+ dsont:source "Twitter"; 
+    dsont:has_extraction_method "Twitter search application programming interface API" ;
+ dsont:has_selection_criteria "Tweets with food-left and/or food-right keywords"; 
+ dsont:has_language "Japanese"; 
+ dsont:has_collection_date "Dec/16". 
+
+
+dsx:selection16sel01ds1 a dsont:Dataset ; 
+ rdfs:label "Tweets"; 
+ dsont:source "Twitter"; 
+ dsont:has_language "Hindi".
+
+dsx:selection17sel01ds1 a dsont:Dataset ; 
+ rdfs:label "Corpus containing ? novels"; 
+ dsont:source "Corpus of Jautze et al. (Jautze, K., Koolen, C., van Cranenburgh, A., & de Jong, H. (2013, June). From high heels to weed attics: a syntactic investigation of chick lit and literature. In Proceedings of the Workshop on Computational Linguistics for Literature (pp. 72-81)."; 
+ dsont:has_language "Dutch". 
+
+
+dsx:selection18sel01ds1 a dsont:Dataset ; 
+ rdfs:label "SMS corpus containing 3000 texts"; 
+ dsont:has_language "Jakarta Indonesian"; 
+ dsont:has_collection_date "2014". 
+
+
+dsx:selection19sel01ds1 a dsont:Dataset ; 
+ rdfs:label "Excel spreadsheet with data from statistical reports (Form 8 nk) of 2,367 museums"; 
+ dsont:source "RF Ministry of Culture in 2015"; 
+ dsont:has_collection_date "Summer 2016". 
+
+
+dsx:selection20sel01ds1 a dsont:Dataset ; 
+ rdfs:label "Federalist Papers containing eighty-five newspaper articles written in 1787â€“88 to convince New York citizens to ratify the US constitution"; 
+ dsont:has_language "English"; 
+ dsont:has_collection_date "". 
+
+
+dsx:selection21sel01ds1 a dsont:Dataset ; 
+ rdfs:label "4,556 theses, defended between 2007 and 2015"; 
+ dsont:source "The Digital Library of the University of Bologna.". 
+
+
+dsx:selection22sel01ds1 a dsont:Dataset ; 
+ rdfs:label "52 news texts"; 
+    dsont:has_extraction_method "Web crawler" ;
+ dsont:source "Tabnak3, ISNA4, IRNA5 and so on"; 
+ dsont:has_selection_criteria "Title, body, journalistâ€™s name, news date, and news domains". 
+
+
+dsx:selection23sel01ds1 a dsont:Dataset ; 
+ rdfs:label "47,981 newspaper articles"; 
+ dsont:source "The Irish Times, The Independent, and the Sunday Independent."; 
+ dsont:has_selection_criteria "With coverage of Irish Politicians between 1997 and 2011.". 
+
+
+dsx:selection24sel01ds1 a dsont:Dataset ; 
+ rdfs:label "132 odes of Khaghaniâ€™s divan containing 8,024 lines". 
+
+
+dsx:selection25sel01ds1 a dsont:Dataset ; 
+ rdfs:label "Architectural drawings". 
+
+
+dsx:selection26sel01ds1 a dsont:Dataset ; 
+ rdfs:label "Fiction texts". 
+
+
+dsx:selection27sel01ds1 a dsont:Dataset ; 
+ rdfs:label "110 modern Korean novels translated into English". 
+
+
+dsx:selection28sel01ds1 a dsont:Dataset ; 
+ rdfs:label "404 news articles"; 
+ dsont:source "https://www.kinds.or.kr"; 
+ dsont:has_selection_criteria "The news must be from 2013"; 
+ dsont:has_language "Korean". 
+
+
+dsx:selection29sel01ds1 a dsont:Dataset ; 
+ rdfs:label "All the poetry of Shaadi". 
+
+
+dsx:selection30sel01ds1 a dsont:Dataset ; 
+ rdfs:label "13 famous orders of Quaran's revelation". 
+
+dsx:selection02sel01	dsont:has_dataset 	dsx:selection02sel01ds2 . 
+
+dsx:selection02sel01ds2 a dsont:Dataset ; 
+		rdfs:label "Facebook posts";
+		    dsont:has_extraction_method "Nairobi 2018 social media toolkit" ;
+ dsont:has_collection_date "2018.08.20 to 2018.09.15".
+		
+dsx:selection02sel01	dsont:has_dataset 	dsx:selection02sel01ds3 . 
+
+dsx:selection02sel01ds3 a dsont:Dataset ; 
+	rdfs:label "Tweets";
+	dsont:source "Twitter"; 
+	dsont:has_extraction_method "Tweets collectedduring the 2017 GLF in Bonn, Germany in December 2017." ;
+	 dsont:has_collection_date "2017.12.xx".
+		
+dsx:selection05sel01	dsont:has_dataset 	dsx:selection05sel01ds2 . 
+		
+dsx:selection05sel01ds2  a dsont:Dataset ; 
+rdfs:label "Textual documents of the Senate Journal"; 
+ dsont:source "http://parlinfo.aph.gov.au."; 
+ dsont:has_selection_criteria "Untabulated data regarding votes on Senate questions at the individual level, within their contents.". 
+
+dsx:selection12sel01	dsont:has_dataset 	dsx:selection12sel01ds2 .
+
+dsx:selection12sel01ds2 a dsont:Dataset ; 
+rdfs:label "News documents"; 
+ dsont:source "Thomson Reuters Tick History"; 
+ dsont:has_language "Japanese";
+ dsont:has_date "2003 to 2013". 
+		
+		
+dsx:selection15sel01	dsont:has_dataset 	dsx:selection15sel01ds2 . 
+dsx:selection15sel01ds2 a dsont:Dataset ; 
+ rdfs:label "Tweets"; 
+ dsont:source "Twitter"; 
+ dsont:has_selection_criteria "Users in dataset1 having made more than 30 tweets including either food-left or food-right keywords";
+ dsont:extraction_method "REST API: user_timeline";
+ dsont:has_language "Japanese".
+ 
+dsx:selection16sel01	dsont:has_dataset 	dsx:selection16sel01ds2 . 
+
+dsx:selection16sel01ds2 a dsont:Dataset ; 
+ rdfs:label "Movie reviews"; 
+ dsont:source "Newspapers"; 
+ dsont:has_language "Hindi".
+		
+dsx:selection18sel01	dsont:has_dataset 	dsx:selection18sel01ds2 . 
+
+dsx:selection18sel01ds2 a dsont:Dataset ; 
+ rdfs:label "Twitter corpus "; 
+ dsont:source "Twitter"; 
+ dsont:extraction_method "Twitter API".
+		
+dsx:selection20sel01	dsont:has_dataset 	dsx:selection20sel01ds2 .
+
+dsx:selection20sel01ds2 a dsont:Dataset ; 
+ rdfs:label "226 State of the Union addresses (SOTU) delivered by forty-one US presidents from Washington (1790) to Obama (2016)."; 
+ dsont:source "www.presidency.ucsb.edu"; 
+ dsont:has_selection_criteria "Harrison (1841) and Garfield (1881) do not appear (term in office too short), while Taylor (1849) and Trump (2017) were excluded because they wrote only one ";
+ dsont:has_language "English".
+ 
+ dsx:selection20sel01	dsont:has_dataset 	dsx:selection20sel01ds3 .
+
+dsx:selection20sel01ds3 a dsont:Dataset ; 
+ rdfs:label "Cross-Lingual Evaluation Forum (CLEF) 2003 test collection"; 
+ dsont:source "European Language Resources Association (ELRA) Web site."; 
+ dsont:has_selection_criteria "Harrison (1841) and Garfield (1881) do not appear (term in office too short), while Taylor (1849) and Trump (2017) were excluded because they wrote only one ";
+ dsont:has_language "Mixed" ; 
+ dsont:has_subset dsx:selection20sel01ds3ss1; 
+ dsont:has_subset dsx:selection20sel01ds3ss2.
+ 
+ dsx:selection20sel01ds3ss1 a dsont:Dataset ; 
+ rdfs:label "5,420 newspaper articles"; 
+  dsont:has_selection_criteria "Newspaper articles appearing in 1995 in the Glasgow Herhald"; 
+   dsont:has_language "English". 
+ 
+dsx:selection20sel01ds3ss2 a dsont:Dataset ; 
+ rdfs:label "4,346 newspaper articles"; 
+  dsont:has_selection_criteria "Newspaper articles appearing in 1994 in the La Stampa newspaper. "; 
+   dsont:has_language "Italian".
+ 
+dsx:selection25sel01	dsont:has_dataset 	dsx:selection25sel01ds2 .
+
+dsx:selection25sel01ds2 a dsont:Dataset ; 
+ rdfs:label "Misc. visual and textual media"; 
+ dsont:source "Various sources, incl. local newspapers and journals".
+
+dsx:selection25sel01	dsont:has_dataset 	dsx:selection25sel01ds3 .
+
+dsx:selection25sel01ds3 a dsont:Dataset ; 
+ rdfs:label "Surveys and interviews"; 
+ dsont:source "Residents of Ã–rnekkÃ¶y and Uzundere".
+ 
+dsx:selection27sel01	dsont:has_dataset 	dsx:selection27sel01ds2 .
+dsx:selection27sel01ds2 a dsont:Dataset ; 
+ rdfs:label "65 modern French novels translated into English"; 
+ dsont:has_language "English".
+
+ dsx:datascope19 dsont:has_modelling dsx:datascope19model1 .
+dsx:datascope19model1 a dsont:Modeling ;
+	dsont:has_representation "The uptake of digitization in Russian museums".
+
+dsx:datascope07 dsont:has_normalization dsx:datascope07normalization1 .
+dsx:datascope07normalization1 a dsont:Normalization ;
+	dsont:has_normalization_step [ rdfs:label "Removal of duplicated data" ].
+	
+dsx:datascope11 dsont:has_normalization dsx:datascope11normalization1 .
+
+dsx:datascope07normalization1 a dsont:Normalization ;
+	dsont:has_normalization_step [ rdfs:label "Removal of duplicated data" ].
+
+dsx:datascope16 dsont:has_normalization dsx:datascope16normalization1 .
+
+dsx:datascope16normalization1 a dsont:Normalization ;
+	dsont:has_normalization_step [  dsont:has_method "nlp" ; rdfs:label "Removal of duplicated data" ];
+	dsont:has_normalization_step [  dsont:has_method "nlp" ; rdfs:label "Transliteration" ];
+	dsont:has_normalization_step [  dsont:has_method "nlp" ; rdfs:label "Spelling correction" ];
+	dsont:has_normalization_step [  dsont:has_method "nlp" ; rdfs:label "Standardization " ].
+
+dsx:datascope22 dsont:has_normalization dsx:datascope22normalization1 .
+
+dsx:datascope22normalization1 a dsont:Normalization;
+	dsont:has_normalization_step [ rdfs:label "Unicode conversion" ];
+	dsont:has_normalization_step [ rdfs:label "Spelling correction" ].
+	
+
+
+	
+dsx:datascope04 dsont:has_classification dsx:datascope04classification1 .
+
+dsx:datascope04classification1 a dsont:Classification ; 
+	rdfs:label "Most frequents trolls: Right troll, news feed, and left troll.".
+	
+	
+dsx:datascope05 dsont:has_classification dsx:datascope05classification1 .
+
+dsx:datascope05classification1 a dsont:Classification ; 
+	rdfs:label "Voting: yes and no";
+	dsont:has_classification_scheme "binary".
+	
+	
+dsx:datascope10 dsont:has_classification dsx:datascope10classification1 .
+
+dsx:datascope10classification1 a dsont:Classification ; 
+	rdfs:label "Cyberbullying: about cyberbullying and not about cyberbullying";
+	dsont:has_classification_scheme "binary".
+	
+	
+dsx:datascope11 dsont:has_classification dsx:datascope11classification1 .
+
+dsx:datascope11classification1 a dsont:Classification ; 
+	rdfs:label "9 demographics identifying the age difference of correspondents".
+	
+dsx:datascope16 dsont:has_classification dsx:datascope16classification1 .
+
+dsx:datascope16classification1 a dsont:Classification ; 
+	rdfs:label "Genres: Chick lit novels and literary novels".	
+	
+dsx:datascope23 dsont:has_classification dsx:datascope23classification1 .
+
+dsx:datascope23classification1 a dsont:Classification ; 
+	rdfs:label "Gender: male and female politicans";
+	dsont:has_classification_scheme "binary".
+	
+	
+dsx:datascope11 dsont:has_linking dsx:datascope11linking1 .
+
+dsx:datascope11linking1 a dsont:Linking ; 
+	rdfs:label "Within dataset: Ego-Alter".
+	
+	<https://doi.org/10.1007/s42001-018-0021-1> a dsont:Paper ; 
+ dsont:published_in  dsx:journal_comp_soc_sci ; 
+ dsont:has_datascope  dsx:datascope01 .
+
+
+<https://doi.org/10.1007/s42001-019-00061-9> a dsont:Paper ; 
+ dsont:published_in  dsx:journal_comp_soc_sci ; 
+ dsont:has_datascope  dsx:datascope02 .
+
+
+<https://doi.org/10.1007/s42001-019-00052-w> a dsont:Paper ; 
+ dsont:published_in  dsx:journal_comp_soc_sci ; 
+ dsont:has_datascope  dsx:datascope03 .
+
+
+<https://doi.org/10.1007/s42001-019-00051-x> a dsont:Paper ; 
+ dsont:published_in  dsx:journal_comp_soc_sci ; 
+ dsont:has_datascope  dsx:datascope04 .
+
+
+<https://doi.org/10.1007/s42001-019-00055-7> a dsont:Paper ; 
+ dsont:published_in  dsx:journal_comp_soc_sci ; 
+ dsont:has_datascope  dsx:datascope05 .
+
+
+<https://doi-org.vu-nl.idm.oclc.org/10.1007/s42001-018-0015-z> a dsont:Paper ; 
+ dsont:published_in  dsx:journal_comp_soc_sci ; 
+ dsont:has_datascope  dsx:datascope06 .
+
+
+<https://doi.org/10.1007/s42001-019-00044-w> a dsont:Paper ; 
+ dsont:published_in  dsx:journal_comp_soc_sci ; 
+ dsont:has_datascope  dsx:datascope07 .
+
+
+<https://doi.org/10.1007/s42001-019-00050-y> a dsont:Paper ; 
+ dsont:published_in  dsx:journal_comp_soc_sci ; 
+ dsont:has_datascope  dsx:datascope08 .
+
+
+<https://doi.org/10.1007/s42001-019-00046-8> a dsont:Paper ; 
+ dsont:published_in  dsx:journal_comp_soc_sci ; 
+ dsont:has_datascope  dsx:datascope09 .
+
+
+<https://doi.org/10.1007/s42001-018-0026-9> a dsont:Paper ; 
+ dsont:published_in  dsx:journal_comp_soc_sci ; 
+ dsont:has_datascope  dsx:datascope10 .
+
+
+<https://doi.org/10.1007/s42001-019-00054-8> a dsont:Paper ; 
+ dsont:published_in  dsx:journal_comp_soc_sci ; 
+ dsont:has_datascope  dsx:datascope11 .
+
+
+<https://doi.org/10.1007/s42001-019-00035-x> a dsont:Paper ; 
+ dsont:published_in  dsx:journal_comp_soc_sci ; 
+ dsont:has_datascope  dsx:datascope12 .
+
+
+<https://doi.org/10.1007/s42001-018-0020-2> a dsont:Paper ; 
+ dsont:published_in  dsx:journal_comp_soc_sci ; 
+ dsont:has_datascope  dsx:datascope13 .
+
+
+<https://doi.org/10.1007/s42001-019-00043-x> a dsont:Paper ; 
+ dsont:published_in  dsx:journal_comp_soc_sci ; 
+ dsont:has_datascope  dsx:datascope14 .
+
+
+<https://doi.org/10.1007/s42001-019-00039-7> a dsont:Paper ; 
+ dsont:published_in  dsx:journal_comp_soc_sci ; 
+ dsont:has_datascope  dsx:datascope15 .
+
+
+<https://doi.org/10.1093/llc/fqy037> a dsont:Paper ; 
+ dsont:published_in  dsx:journal_dig_schol_hum ; 
+ dsont:has_datascope  dsx:datascope16 .
+
+
+<https://doi-org.vu-nl.idm.oclc.org/10.1093/llc/fqx016> a dsont:Paper ; 
+ dsont:published_in  dsx:journal_dig_schol_hum ; 
+ dsont:has_datascope  dsx:datascope17 .
+
+
+<https://doi.org/10.1093/llc/fqy028> a dsont:Paper ; 
+ dsont:published_in  dsx:journal_dig_schol_hum ; 
+ dsont:has_datascope  dsx:datascope18 .
+
+
+<https://doi.org/10.1093/llc/fqy035> a dsont:Paper ; 
+ dsont:published_in  dsx:journal_dig_schol_hum ; 
+ dsont:has_datascope  dsx:datascope19 .
+
+
+<https://doi-org.vu-nl.idm.oclc.org/10.1093/llc/fqx046> a dsont:Paper ; 
+ dsont:published_in  dsx:journal_dig_schol_hum ; 
+ dsont:has_datascope  dsx:datascope20 .
+
+
+<https://doi-org.vu-nl.idm.oclc.org/10.1093/llc/fqx062> a dsont:Paper ; 
+ dsont:published_in  dsx:journal_dig_schol_hum ; 
+ dsont:has_datascope  dsx:datascope21 .
+
+
+<https://doi.org/10.1093/llc/fqy034> a dsont:Paper ; 
+ dsont:published_in  dsx:journal_dig_schol_hum ; 
+ dsont:has_datascope  dsx:datascope22 .
+
+
+<https://doi.org/10.1093/llc/fqy005> a dsont:Paper ; 
+ dsont:published_in  dsx:journal_dig_schol_hum ; 
+ dsont:has_datascope  dsx:datascope23 .
+
+
+<https://doi.org/10.1093/llc/fqy069> a dsont:Paper ; 
+ dsont:published_in  dsx:journal_dig_schol_hum ; 
+ dsont:has_datascope  dsx:datascope24 .
+
+
+<https://doi.org/10.1093/llc/fqw061> a dsont:Paper ; 
+ dsont:published_in  dsx:journal_dig_schol_hum ; 
+ dsont:has_datascope  dsx:datascope25 .
+
+
+<https://doi.org/10.1093/llc/fqx017> a dsont:Paper ; 
+ dsont:published_in  dsx:journal_dig_schol_hum ; 
+ dsont:has_datascope  dsx:datascope26 .
+
+
+<https://doi.org/10.1093/llc/fqx056> a dsont:Paper ; 
+ dsont:published_in  dsx:journal_dig_schol_hum ; 
+ dsont:has_datascope  dsx:datascope27 .
+
+
+<https://doi.org/10.1093/llc/fqy017> a dsont:Paper ; 
+ dsont:published_in  dsx:journal_dig_schol_hum ; 
+ dsont:has_datascope  dsx:datascope28 .
+
+
+<https://doi.org/10.1093/llc/fqy024> a dsont:Paper ; 
+ dsont:published_in  dsx:journal_dig_schol_hum ; 
+ dsont:has_datascope  dsx:datascope29 .
+
+
+<https://doi.org/10.1093/llc/fqy030> a dsont:Paper ; 
+ dsont:published_in  dsx:journal_dig_schol_hum ; 
+ dsont:has_datascope  dsx:datascope30 .
+
+dsx:datascope01 dsont:has_selection dsx:selection01sel01 . 
+
+
+dsx:datascope02 dsont:has_selection dsx:selection02sel01 . 
+
+
+dsx:datascope03 dsont:has_selection dsx:selection03sel01 . 
+
+
+dsx:datascope04 dsont:has_selection dsx:selection04sel01 . 
+
+
+dsx:datascope05 dsont:has_selection dsx:selection05sel01 . 
+
+
+dsx:datascope06 dsont:has_selection dsx:selection06sel01 . 
+
+
+dsx:datascope07 dsont:has_selection dsx:selection07sel01 . 
+
+
+dsx:datascope08 dsont:has_selection dsx:selection08sel01 . 
+
+
+dsx:datascope09 dsont:has_selection dsx:selection09sel01 . 
+
+
+dsx:datascope10 dsont:has_selection dsx:selection10sel01 . 
+
+
+dsx:datascope11 dsont:has_selection dsx:selection11sel01 . 
+
+
+dsx:datascope12 dsont:has_selection dsx:selection12sel01 . 
+
+
+dsx:datascope13 dsont:has_selection dsx:selection13sel01 . 
+
+
+dsx:datascope14 dsont:has_selection dsx:selection14sel01 . 
+
+
+dsx:datascope15 dsont:has_selection dsx:selection15sel01 . 
+
+
+dsx:datascope16 dsont:has_selection dsx:selection16sel01 . 
+
+
+dsx:datascope17 dsont:has_selection dsx:selection17sel01 . 
+
+
+dsx:datascope18 dsont:has_selection dsx:selection18sel01 . 
+
+
+dsx:datascope19 dsont:has_selection dsx:selection19sel01 . 
+
+
+dsx:datascope20 dsont:has_selection dsx:selection20sel01 . 
+
+
+dsx:datascope21 dsont:has_selection dsx:selection21sel01 . 
+
+
+dsx:datascope22 dsont:has_selection dsx:selection22sel01 . 
+
+
+dsx:datascope23 dsont:has_selection dsx:selection23sel01 . 
+
+
+dsx:datascope24 dsont:has_selection dsx:selection24sel01 . 
+
+
+dsx:datascope25 dsont:has_selection dsx:selection25sel01 . 
+
+
+dsx:datascope26 dsont:has_selection dsx:selection26sel01 . 
+
+
+dsx:datascope27 dsont:has_selection dsx:selection27sel01 . 
+
+
+dsx:datascope28 dsont:has_selection dsx:selection28sel01 . 
+
+
+dsx:datascope29 dsont:has_selection dsx:selection29sel01 . 
+
+
+dsx:datascope30 dsont:has_selection dsx:selection30sel01 . 
+
+dsx:selection01sel01 a dsont:Selection ; 
+ dsont:has_dataset  dsx:selection01sel01ds1 . 
+    
+dsx:selection02sel01 a dsont:Selection ; 
+ dsont:has_dataset  dsx:selection02sel01ds1 ; 
+ dsont:has_dataset  dsx:selection02sel01ds2 ; 
+ dsont:has_dataset  dsx:selection02sel01ds3 . 
+
+dsx:selection03sel01 a dsont:Selection ; 
+ dsont:has_dataset  dsx:selection03sel01ds1 . 
+    
+dsx:selection04sel01 a dsont:Selection ; 
+ dsont:has_dataset  dsx:selection04sel01ds1 . 
+    
+dsx:selection05sel01 a dsont:Selection ; 
+ dsont:has_dataset  dsx:selection05sel01ds1 ; 
+ dsont:has_dataset  dsx:selection05sel01ds2 . 
+  
+dsx:selection06sel01 a dsont:Selection ; 
+ dsont:has_dataset  dsx:selection06sel01ds1 . 
+    
+dsx:selection07sel01 a dsont:Selection ; 
+ dsont:has_dataset  dsx:selection07sel01ds1 . 
+    
+dsx:selection08sel01 a dsont:Selection ; 
+ dsont:has_dataset  dsx:selection08sel01ds1 . 
+    
+dsx:selection09sel01 a dsont:Selection ; 
+ dsont:has_dataset  dsx:selection09sel01ds1 . 
+    
+dsx:selection10sel01 a dsont:Selection ; 
+ dsont:has_dataset  dsx:selection10sel01ds1 . 
+    
+dsx:selection11sel01 a dsont:Selection ; 
+ dsont:has_dataset  dsx:selection11sel01ds1 . 
+    
+dsx:selection12sel01 a dsont:Selection ; 
+ dsont:has_dataset  dsx:selection12sel01ds1 ; 
+ dsont:has_dataset  dsx:selection12sel01ds2 . 
+  
+dsx:selection13sel01 a dsont:Selection ; 
+ dsont:has_dataset  dsx:selection13sel01ds1 . 
+    
+dsx:selection14sel01 a dsont:Selection ; 
+ dsont:has_dataset  dsx:selection14sel01ds1 . 
+    
+dsx:selection15sel01 a dsont:Selection ; 
+ dsont:has_dataset  dsx:selection15sel01ds1 ; 
+ dsont:has_dataset  dsx:selection15sel01ds2 . 
+  
+dsx:selection16sel01 a dsont:Selection ; 
+ dsont:has_dataset  dsx:selection16sel01ds1 ; 
+ dsont:has_dataset  dsx:selection16sel01ds2 . 
+  
+dsx:selection17sel01 a dsont:Selection ; 
+ dsont:has_dataset  dsx:selection17sel01ds1 . 
+    
+dsx:selection18sel01 a dsont:Selection ; 
+ dsont:has_dataset  dsx:selection18sel01ds1 ; 
+ dsont:has_dataset  dsx:selection18sel01ds2 . 
+  
+dsx:selection19sel01 a dsont:Selection ; 
+ dsont:has_dataset  dsx:selection19sel01ds1 . 
+    
+dsx:selection20sel01 a dsont:Selection ; 
+ dsont:has_dataset  dsx:selection20sel01ds1 ; 
+ dsont:has_dataset  dsx:selection20sel01ds2 . 
+ 
+dsx:selection21sel01 a dsont:Selection ; 
+ dsont:has_dataset  dsx:selection21sel01ds1 . 
+    
+dsx:selection22sel01 a dsont:Selection ; 
+ dsont:has_dataset  dsx:selection22sel01ds1 . 
+    
+dsx:selection23sel01 a dsont:Selection ; 
+ dsont:has_dataset  dsx:selection23sel01ds1 . 
+    
+dsx:selection24sel01 a dsont:Selection ; 
+ dsont:has_dataset  dsx:selection24sel01ds1 . 
+    
+dsx:selection25sel01 a dsont:Selection ; 
+ dsont:has_dataset  dsx:selection25sel01ds1 ; 
+ dsont:has_dataset  dsx:selection25sel01ds2 ; 
+ dsont:has_dataset  dsx:selection25sel01ds3 . 
+
+dsx:selection26sel01 a dsont:Selection ; 
+ dsont:has_dataset  dsx:selection26sel01ds1 . 
+    
+dsx:selection27sel01 a dsont:Selection ; 
+ dsont:has_dataset  dsx:selection27sel01ds1 ; 
+ dsont:has_dataset  dsx:selection27sel01ds2 . 
+  
+dsx:selection28sel01 a dsont:Selection ; 
+ dsont:has_dataset  dsx:selection28sel01ds1 . 
+    
+dsx:selection29sel01 a dsont:Selection ; 
+ dsont:has_dataset  dsx:selection29sel01ds1 . 
+    
+dsx:selection30sel01 a dsont:Selection ; 
+ dsont:has_dataset  dsx:selection30sel01ds1 . 
+    
+dsx:selection03sel01ds1	dsont:has_subset 	dsx:selection03sel01ds1subset1 . 
+dsx:selection04sel01ds1	dsont:has_subset 	dsx:selection04sel01ds1subset1 . 		
+dsx:selection06sel01ds1	dsont:has_subset 	dsx:selection06sel01ds1subset1 . 
+dsx:selection07sel01ds1	dsont:has_subset 	dsx:selection07sel01ds1subset1 . 	
+dsx:selection10sel01ds1	dsont:has_subset 	dsx:selection10sel01ds1subset1 . 
+dsx:selection11sel01ds1	dsont:has_subset 	dsx:selection11sel01ds1subset1 . 
+dsx:selection11sel01ds1	dsont:has_subset 	dsx:selection11sel01ds1subset2 . 
+dsx:selection11sel01ds1	dsont:has_subset 	dsx:selection11sel01ds1subset3 . 
+dsx:selection17sel01ds1	dsont:has_subset 	dsx:selection17sel01ds1subset1 . 
+dsx:selection18sel01ds1	dsont:has_subset 	dsx:selection18sel01ds1subset1 . 
+dsx:selection19sel01ds1	dsont:has_subset 	dsx:selection19sel01ds1subset1 . 
+dsx:selection21sel01ds1	dsont:has_subset 	dsx:selection21sel01ds1subset1 . 
+
+
+dsx:selection03sel01ds1subset1 a dsont:Dataset ; rdfs:label "Tweets" ; 
+ dsont:has_language "English". 
+
+dsx:selection04sel01ds1subset1 a dsont:Dataset ; rdfs:label "Tweets	Handles associated with the Internet Research Agency". 					
+								
+dsx:selection06sel01ds1subset1 a dsont:Dataset ; rdfs:label "92% of the Tweets" ; 
+  dsont:has_selection_criteria	"Arabic language" ;
+  dsont:has_language "Arabic". 
+			
+dsx:selection07sel01ds1subset1 a dsont:Dataset ; rdfs:label "541 pro-vaccine articles and 382 anti-vaccine articles" ; 
+  dsont:has_selection_criteria	"Articles were included if they (a) were active links; (b) focused on human vaccines; (c) indicated that people should or should not get vaccinated; (d) discussed benefits/risks of vaccines. Articles were excluded if they (a) were not written in English; (b) only contained a video without any text description; (c) were listserv, newsgroup, or discussion board pages; (d) required downloading.". 
+											
+dsx:selection10sel01ds1subset1 a dsont:Dataset ; rdfs:label "Dataset with 2148 pairs of users and 4865 messages between them" ; 
+  dsont:has_selection_criteria	"Both the sender and the receiver interaction histories must exist in the CAW 2.0 database.". 
+					
+dsx:selection11sel01ds1subset1 a dsont:Dataset ; rdfs:label "Phone calls" ; 
+  dsont:has_selection_criteria	"Callers with known metadata's top five most frequent correspondents		Phone calls	More than five calls total; at least one call registered in 5 of the 7 months; receivers with known age and gender metadata		Phone calls	Age difference within pairs less than 20 years". 
+
+dsx:selection11sel01ds1subset2 a dsont:Dataset ; rdfs:label "Phone calls" ; 
+  dsont:has_selection_criteria	"More than five calls total; at least one call registered in 5 of the 7 months; receivers with known age and gender metadata".
+  
+ 
+dsx:selection11sel01ds1subset3 a dsont:Dataset ; rdfs:label "Phone calls" ; 
+  dsont:has_selection_criteria	"Age difference within pairs less than 20 years". 							
+								
+dsx:selection17sel01ds1subset1 a dsont:Dataset ; rdfs:label "32 novels (16 chick lit novels and 16 literary novels)" ; 
+  dsont:has_selection_criteria	"The following genres: literary fiction with an author who has won a national literary price from which 50% within this genre is written by female and the other 50% by male authors and popular fiction". 
+
+						
+dsx:selection18sel01ds1subset1 a dsont:Dataset ; rdfs:label "10,511 observed tokens and their corresponding standard forms." ; 
+  dsont:has_selection_criteria	"Verbatim tier must match number of words in the standard tier and resulting SMSs extracted and word aligned.". 
+
+						
+dsx:selection19sel01ds1subset1 a dsont:Dataset ; rdfs:label "Data on 2,367 museums" ; 
+  dsont:has_selection_criteria	"Removing information which did not relate to the digitization of museum objects or contained data on galleries that were for temporary display:". 
+
+						
+								
+dsx:selection21sel01ds1subset1 a dsont:Dataset ; rdfs:label "2,954 theses" ; 
+  dsont:has_selection_criteria	"Theses must be in English and have an abstract". 
+
+					
+
+
+
+ 
+

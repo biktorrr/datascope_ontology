@@ -1,181 +1,159 @@
-@prefix       foaf: <http://xmlns.com/foaf/0.1/> .
-@prefix       skos: <http://www.w3.org/2004/02/skos/core#> .
-@prefix        owl: <http://www.w3.org/2002/07/owl#> .
-@prefix       rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
-@prefix        rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
-@prefix 	dcterms: <http://purl.org/dc/terms/> .
-@prefix 	pro: <http://purl.org/spar/pro/> .
-@prefix     void: <http://rdfs.org/ns/void#> .
-@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
-@prefix prov: <http://www.w3.org/ns/prov#> .
+@prefix      prov: <http://www.w3.org/ns/prov#> .
+@prefix      rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix       rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix   dcterms: <http://purl.org/dc/terms/> .
+@prefix datascope: <https://w3id.org/datascope#> .
 
-@prefix 	dsont: <http://w3id.org/datascope#> .
+# Named toplevel resources (27)
 
-
-
-#CLASSES
-
-dsont:Classification
+datascope:Classification
 	a rdfs:Class ;
-	rdfs:subClassOf prov:Entity; #I mapped the elements of a datascope to Prov entities rather than activities
-	rdfs:label "Classification" .
+	rdfs:label "Classification" ;
+	rdfs:subClassOf prov:Entity .
 
-dsont:DataScope
+datascope:Dataset
 	a rdfs:Class ;
-	rdfs:subClassOf prov:Entity; #I mapped the elements of a datascope to Prov entities rather than activities
-	rdfs:label "DataScope" .
+	rdfs:label "Dataset" .
 
-dsont:DataSet
+datascope:Linking
 	a rdfs:Class ;
-	rdfs:subClassOf void:DataSet;
-	rdfs:label "DataSet" .
+	rdfs:label "Linking" ;
+	rdfs:subClassOf prov:Entity .
 
-dsont:Journal
+datascope:Modeling
 	a rdfs:Class ;
-	rdfs:label "Journal" .
+	rdfs:label "Modeling" .
 
-dsont:Linking
+datascope:Normalization
 	a rdfs:Class ;
-	rdfs:subClassOf prov:Entity; #I mapped the elements of a datascope to Prov entities rather than activities
-	rdfs:label "Linking" .
+	rdfs:label "Normalization" ;
+	rdfs:subClassOf prov:Entity .
 
-dsont:Normalization
+datascope:Paper
 	a rdfs:Class ;
-	rdfs:subClassOf prov:Entity; #I mapped the elements of a datascope to Prov entities rather than activities
-	rdfs:label "Normalization" .
+	rdfs:label "Paper" ;
+	rdfs:subClassOf dcterms:BibliographicResource .
 
-dsont:NormalizationStep
+datascope:Selection
 	a rdfs:Class ;
-	rdfs:label "NormalizationStep" .
+	rdfs:label "Selection" ;
+	rdfs:subClassOf prov:Entity .
 
-dsont:Paper
-	a rdfs:Class ;
-	rdfs:subClassOf dcterms:BibliographicResource ;
-	rdfs:label "Paper" .
-
-dsont:Selection
-	a rdfs:Class ;
-	rdfs:subClassOf prov:Entity; #I mapped the elements of a datascope to Prov entities rather than activities
-	rdfs:label "Selection" .
-	
-#Properties
-
-dsont:has_CategoryScheme
+datascope:extraction_method
 	a rdf:Property ;
-	rdfs:domain dsont:Classification ;
-	rdfs:label "has_CategoryScheme" ;
-	rdfs:range rdfs:Resource .
-
-dsont:has_Classification
-	a rdf:Property ;
-	rdfs:domain dsont:DataScope ;
-	rdfs:label "has_Classification" ;
-	rdfs:range dsont:Classification .
-
-dsont:has_CollectionDate
-	a rdf:Property ;
-	rdfs:domain dsont:DataSet ;
-	rdfs:label "has_CollectionDate" ;
-	rdfs:range xsd:date .
-
-dsont:has_Datascope
-	a rdf:Property ;
-	rdfs:domain dsont:Paper ;
-	rdfs:label "has_Datascope" ;
-	rdfs:range dsont:DataScope .
-
-dsont:has_Dataset
-	a rdf:Property ;
-	rdfs:domain dsont:Selection ;
-	rdfs:label "has_Dataset" ;
-	rdfs:range dsont:DataSet .
-
-dsont:has_Language
-	a rdf:Property ;
-	rdfs:subPropertyOf dcterms:language;
-	rdfs:domain dsont:DataSet ;
-	rdfs:label "has_Language" ;
+	rdfs:domain datascope:Dataset ;
+	rdfs:label "extraction_method" ;
 	rdfs:range rdfs:Literal .
 
-dsont:has_Linking
+datascope:has_classification
 	a rdf:Property ;
-	rdfs:domain dsont:DataScope ;
-	rdfs:label "has_Linking" ;
-	rdfs:range dsont:Linking .
-
-dsont:has_Method
-	a rdf:Property ;
-	rdfs:label "has_Method" ;
-	rdfs:range rdfs:Literal .
-
-dsont:has_Modeling
-	a rdf:Property ;
-	rdfs:domain dsont:DataScope ;
-	rdfs:label "has_Modeling" ;
-	rdfs:range rdfs:Resource .
-
-dsont:has_Normalization
-	a rdf:Property ;
-	rdfs:domain dsont:DataScope ;
-	rdfs:label "has_Normalization" ;
-	rdfs:range dsont:Normalization .
-
-dsont:has_Paper
-	a rdf:Property ;
-	rdfs:domain dsont:Journal ;
-	rdfs:label "has_Paper" ;
-	rdfs:range dsont:Paper .
-
-dsont:has_Provenance
-	a rdf:Property ;
-	rdfs:domain dsont:DataSet ;
-	rdfs:label "has_Provenance" ;
-	rdfs:range rdfs:Resource .
-
-dsont:has_Selection
-	a rdf:Property ;
-	rdfs:domain dsont:DataScope ;
-	rdfs:label "has_Selection" ;
-	rdfs:range dsont:Selection .
-
-dsont:has_SelectionCriteria
-	a rdf:Property ;
-	rdfs:domain dsont:DataSet ;
-	rdfs:label "has_SelectionCriteria" ;
-	rdfs:range rdfs:Literal .
-
-dsont:has_Source
-	a rdf:Property ;
-	rdfs:subPropertyOf prov:used;
-	rdfs:subPropertyOf dcterms:source;
 	rdfs:domain rdfs:Resource ;
-	rdfs:label "has_Source" ;
+	rdfs:label "has_classification" ;
+	rdfs:range datascope:Classification .
+
+datascope:has_classification_scheme
+	a rdf:Property ;
+	rdfs:domain datascope:Classification ;
+	rdfs:label "has_classification_scheme" ;
+	rdfs:range rdfs:Literal .
+
+datascope:has_collection_date
+	a rdf:Property ;
+	rdfs:domain datascope:Dataset ;
+	rdfs:label "has_collection_date" ;
+	rdfs:range rdfs:Literal .
+
+datascope:has_datascope
+	a rdf:Property ;
+	rdfs:domain datascope:Paper ;
+	rdfs:label "has_datascope" ;
 	rdfs:range rdfs:Resource .
 
-dsont:has_Step
+datascope:has_dataset
 	a rdf:Property ;
-	rdfs:domain dsont:Normalization ;
-	rdfs:label "has_Step" .
+	rdfs:domain datascope:Selection ;
+	rdfs:label "has_dataset" ;
+	rdfs:range datascope:Dataset .
 
-dsont:has_Subset
+datascope:has_date
 	a rdf:Property ;
-	rdfs:subPropertyOf void:subset;
-	rdfs:domain dsont:DataSet ;
-	rdfs:label "has_Subset" ;
+	rdfs:domain datascope:Dataset ;
+	rdfs:label "has_date" ;
+	rdfs:range rdfs:Literal .
+
+datascope:has_extraction_method
+	a rdf:Property ;
+	rdfs:domain datascope:Dataset ;
+	rdfs:label "has_extraction_method" ;
+	rdfs:range rdfs:Literal .
+
+datascope:has_language
+	a rdf:Property ;
+	rdfs:domain datascope:Dataset ;
+	rdfs:label "has_language" ;
+	rdfs:range rdfs:Literal .
+
+datascope:has_linking
+	a rdf:Property ;
+	rdfs:domain rdfs:Resource ;
+	rdfs:label "has_linking" ;
+	rdfs:range datascope:Linking .
+
+datascope:has_method
+	a rdf:Property ;
+	rdfs:domain rdfs:Resource ;
+	rdfs:label "has_method" ;
+	rdfs:range rdfs:Literal .
+
+datascope:has_modelling
+	a rdf:Property ;
+	rdfs:domain rdfs:Resource ;
+	rdfs:label "has_modelling" ;
+	rdfs:range datascope:Modeling .
+
+datascope:has_normalization
+	a rdf:Property ;
+	rdfs:domain rdfs:Resource ;
+	rdfs:label "has_normalization" .
+
+datascope:has_normalization_step
+	a rdf:Property ;
+	rdfs:domain datascope:Normalization ;
+	rdfs:label "has_normalization_step" ;
 	rdfs:range rdfs:Resource .
 
-dsont:linkedEntities
+datascope:has_representation
 	a rdf:Property ;
-	rdfs:domain dsont:Linking ;
-	rdfs:label "linkedEntities" ;
+	rdfs:domain datascope:Modeling ;
+	rdfs:label "has_representation" ;
+	rdfs:range rdfs:Literal .
+
+datascope:has_selection
+	a rdf:Property ;
+	rdfs:domain rdfs:Resource ;
+	rdfs:label "has_selection" ;
+	rdfs:range datascope:Selection .
+
+datascope:has_selection_criteria
+	a rdf:Property ;
+	rdfs:domain datascope:Dataset ;
+	rdfs:label "has_selection_criteria" ;
+	rdfs:range rdfs:Literal .
+
+datascope:has_subset
+	a rdf:Property ;
+	rdfs:domain datascope:Dataset ;
+	rdfs:label "has_subset" ;
+	rdfs:range datascope:Dataset .
+
+datascope:published_in
+	a rdf:Property ;
+	rdfs:domain datascope:Paper ;
+	rdfs:label "published_in" ;
 	rdfs:range rdfs:Resource .
 
-dsont:published_In
+datascope:source
 	a rdf:Property ;
-	rdfs:domain dsont:Paper ;
-	rdfs:label "published_In" ;
-	rdfs:range dsont:Journal .
-
-<http://example.org/datascope/NormalizationStep>
-	a rdfs:Class ;
-	rdfs:label "NormalizationStep" .
+	rdfs:domain datascope:Dataset ;
+	rdfs:label "source" ;
+	rdfs:range rdfs:Literal .
