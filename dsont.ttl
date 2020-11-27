@@ -2,163 +2,208 @@
 @prefix      rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
 @prefix       rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
 @prefix   dcterms: <http://purl.org/dc/terms/> .
-@prefix dsont: <https://w3id.org/datascope#> .
+@prefix     dsont: <https://w3id.org/datascope#> .
 
-# Named toplevel resources (27)
+# Changelog 
+## 27-11-2020 - New version includes language-typed literals, rdfs comments 
+## 26-02-2020 - Updated version. Some property names homogenized 
+## 21-01-2020 - Original version 
 
 dsont:DataScope
 	a rdfs:Class ;
-	rdfs:label "Data scope" ;
-	rdfs:subClassOf prov:Entity .
+	rdfs:label "Data scope"@en ;
+	rdfs:label "Data scope"@nl ;
+	rdfs:subClassOf prov:Entity ;
+	rdfs:comment "The class of Data Scopes. Instances of this class are specific data scopes"@en.
 
 dsont:Classification
 	a rdfs:Class ;
-	rdfs:label "Classification" ;
-	rdfs:subClassOf prov:Entity .
+	rdfs:label "Classification"@en ;
+	rdfs:label "Classificatie"@nl ;
+	rdfs:subClassOf prov:Entity;
+	rdfs:comment "Class to represent the grouping or categorization of objects in a data scope."@en.
+
 
 dsont:Dataset
 	a rdfs:Class ;
-	rdfs:label "Dataset" .
+	rdfs:label "Data set"@en ;
+	rdfs:label "Dataset"@nl ;
+	rdfs:subClassOf prov:Entity;
+	rdfs:comment "A dataset or subset used in a specific selection. This not a reference to the dataset itself but the dataset as part of the selection."@en.
 
 dsont:Linking
 	a rdfs:Class ;
-	rdfs:label "Linking" ;
-	rdfs:subClassOf prov:Entity .
+	rdfs:label "Linking"@en ;
+	rdfs:label "Verbindingen"@nl ;
+	rdfs:subClassOf prov:Entity ;
+	rdfs:comment "Describes which explicit internal and external connections between data items are established. Can contain (a reference to) a linkset."@en.
 
 dsont:Modeling
 	a rdfs:Class ;
-	rdfs:label "Modeling" .
+	rdfs:subClassOf prov:Entity  ;
+	rdfs:label "Modeling"@en  ;
+	rdfs:label "Modelleering"@nl ;
+	rdfs:comment "Defines how the relevant elements in sources are represented."@en.
 
 dsont:Normalization
 	a rdfs:Class ;
-	rdfs:label "Normalization" ;
-	rdfs:subClassOf prov:Entity .
+	rdfs:label "Normalization"@en ;
+	rdfs:label "Normalisatie"@nl ;
+	rdfs:subClassOf prov:Entity  ;
+	rdfs:comment "Describes how surface forms mapped to a normalized form? (e.g. the mapping of person names to a 'Firstname, Lastname' form.)"@en.
 
 dsont:Paper
 	a rdfs:Class ;
-	rdfs:label "Paper" ;
-	rdfs:subClassOf dcterms:BibliographicResource .
+	rdfs:label "Paper"@en ;
+	rdfs:label "Document"@nl ;
+	rdfs:subClassOf dcterms:BibliographicResource  ;
+	rdfs:comment "A class to describe a reporting document for which the Data scope is used (scientific paper or other)"@en.
 
 dsont:Selection
 	a rdfs:Class ;
-	rdfs:label "Selection" ;
-	rdfs:subClassOf prov:Entity .
+	rdfs:label "Selection"@en ;
+	rdfs:label "Selectie"@nl ;
+	rdfs:subClassOf prov:Entity  ;
+	rdfs:comment "Describes a data selection process and its results."@en.
 
-dsont:extraction_method
+dsont:has_extraction_method
 	a rdf:Property ;
 	rdfs:domain dsont:Dataset ;
-	rdfs:label "extraction_method" ;
-	rdfs:range rdfs:Literal .
+	rdfs:label "extraction_method"@en ;
+	rdfs:comment "Describes the method used to extract a dataset"@en.
 
 dsont:has_classification
 	a rdf:Property ;
 	rdfs:domain dsont:DataScope ;
-	rdfs:label "has_classification" ;
+	rdfs:label "has classification"@en ;
+	rdfs:comment "Links a data scope to a classification element"@en ;
 	rdfs:range dsont:Classification .
 
 dsont:has_classification_scheme
 	a rdf:Property ;
 	rdfs:domain dsont:Classification ;
-	rdfs:label "has_classification_scheme" ;
-	rdfs:range rdfs:Literal .
+	rdfs:label "has classification_scheme"@en ;
+	#rdfs:range rdfs:Literal  ;
+	rdfs:comment "Property to describe a classification scheme used for a specific classification. Can use an explicit source (for example in SKOS)"@en.
 
 dsont:has_collection_date
 	a rdf:Property ;
 	rdfs:domain dsont:Dataset ;
-	rdfs:label "has_collection_date" ;
-	rdfs:range rdfs:Literal .
+	rdfs:label "has collection_date"@en ;
+	rdfs:range rdfs:Literal  ;
+	rdfs:comment "Property to define the date of retrieval of a specific subset."@en. 
 
 dsont:has_datascope
 	a rdf:Property ;
 	rdfs:domain dsont:Paper ;
-	rdfs:label "has_datascope" ;
-	rdfs:range dsont:DataScope .
+	rdfs:label "has datascope"@en ;
+	rdfs:range dsont:DataScope  ;
+	rdfs:comment "Property to link a specific research output (paper) to a Data Scope."@en.
 
 dsont:has_dataset
 	a rdf:Property ;
 	rdfs:domain dsont:Selection ;
-	rdfs:label "has_dataset" ;
-	rdfs:range dsont:Dataset .
+	rdfs:label "has dataset"@en ;
+	rdfs:range dsont:Dataset ;
+	rdfs:comment "Property to link a Selection step to a dataset."@en.
 
 dsont:has_date
 	a rdf:Property ;
 	rdfs:domain dsont:Dataset ;
-	rdfs:label "has_date" ;
-	rdfs:range rdfs:Literal .
-
-dsont:has_extraction_method
-	a rdf:Property ;
-	rdfs:domain dsont:Dataset ;
-	rdfs:label "has_extraction_method" ;
-	rdfs:range rdfs:Literal .
+	rdfs:label "has date"@en ;
+	rdfs:range rdfs:Literal ;
+	rdfs:comment "a date for the dataset (for date of retrieval, use has_collection_date."@en.
 
 dsont:has_language
 	a rdf:Property ;
 	rdfs:domain dsont:Dataset ;
-	rdfs:label "has_language" ;
-	rdfs:range rdfs:Literal .
+	rdfs:label "has language"@en ;
+	rdfs:range rdfs:Literal ;
+	rdfs:comment "Describes the language of a dataset"@en.
 
 dsont:has_linking
 	a rdf:Property ;
 	rdfs:domain dsont:DataScope ;
-	rdfs:label "has_linking" ;
-	rdfs:range dsont:Linking .
+	rdfs:label "has linking"@en ;
+	rdfs:range dsont:Linking ;
+	rdfs:comment "Property to connect a Linking step to a Data Scope"@en.
 
 dsont:has_method
 	a rdf:Property ;
 	rdfs:domain rdfs:Resource ;
-	rdfs:label "has_method" ;
-	rdfs:range rdfs:Literal .
+	rdfs:label "has method"@en ;
+	rdfs:range rdfs:Literal ;
+	rdfs:comment "generic property to specify a method used in a step (for example in Normalization)"@en.
 
 dsont:has_modelling
 	a rdf:Property ;
 	rdfs:domain dsont:DataScope ;
-	rdfs:label "has_modelling" ;
-	rdfs:range dsont:Modeling .
+	rdfs:label "has modelling"@en ;
+	rdfs:range dsont:Modeling ;
+	rdfs:comment "property to link a Modelling step to a Data Scope"@en.
 
 dsont:has_normalization
 	a rdf:Property ;
 	rdfs:domain dsont:DataScope ;
-	rdfs:label "has_normalization" .
+	rdfs:label "has normalization"@en ;
+	rdfs:range dsont:Normalization ;
+	rdfs:comment "property to link a Normalization instance to a Data Scope"@en.
 
 dsont:has_normalization_step
 	a rdf:Property ;
 	rdfs:domain dsont:Normalization ;
-	rdfs:label "has_normalization_step" ;
-	rdfs:range rdfs:Resource .
+	rdfs:label "has normalization_step"@en ;
+	rdfs:range rdfs:Resource ;
+	rdfs:comment "property to link a Normalization step to Normalization"@en.
 
 dsont:has_representation
 	a rdf:Property ;
 	rdfs:domain dsont:Modeling ;
-	rdfs:label "has_representation" ;
-	rdfs:range rdfs:Literal .
+	rdfs:label "has representation"@en ;
+	rdfs:range rdfs:Literal ;
+	rdfs:comment "property to specify the representation form for a Modelling"@en.
 
 dsont:has_selection
 	a rdf:Property ;
 	rdfs:domain dsont:DataScope ;
-	rdfs:label "has_selection" ;
-	rdfs:range dsont:Selection .
+	rdfs:label "has selection"@en ;
+	rdfs:range dsont:Selection ;
+	rdfs:comment "property to link a Selection to a Data Scope"@en.
 
 dsont:has_selection_criteria
 	a rdf:Property ;
 	rdfs:domain dsont:Dataset ;
-	rdfs:label "has_selection_criteria" ;
-	rdfs:range rdfs:Literal .
+	rdfs:label "has selection_criteria"@en ;
+	rdfs:range rdfs:Literal ;
+	rdfs:comment "property to describe one or more selection criteria for a dataset"@en.
 
 dsont:has_subset
 	a rdf:Property ;
+	rdfs:subPropertyOf dcterms:hasPart;
 	rdfs:domain dsont:Dataset ;
-	rdfs:label "has_subset" ;
-	rdfs:range dsont:Dataset .
+	rdfs:label "has subset"@en ;
+	rdfs:range dsont:Dataset ;
+	rdfs:comment "property to indicate a subset of a dataset"@en.
+	
+dsont:is_subset_of
+	a rdf:Property ;
+	rdfs:subPropertyOf dcterms:partOf;
+	rdfs:domain dsont:Dataset ;
+	rdfs:label "is subset of"@en ;
+	rdfs:range dsont:Dataset ;
+	rdfs:comment "property to link data subset to its superset"@en.
 
 dsont:published_in
 	a rdf:Property ;
 	rdfs:domain dsont:Paper ;
-	rdfs:label "published_in" ;
-	rdfs:range rdfs:Resource .
+	rdfs:label "published_in"@en ;
+	rdfs:range rdfs:Resource ;
+	rdfs:comment "Property to link a paper to its publishing venue."@en.
 
 dsont:source
 	a rdf:Property ;
+	rdfs:subPropertyOf dcterms:source;
 	rdfs:domain dsont:Dataset ;
-	rdfs:label "source" ;
-	rdfs:range rdfs:Literal .
+	rdfs:label "source"@en ;
+	rdfs:range rdfs:Literal ;
+	rdfs:comment "property to describe dht source of a dataset (can point to an internal representation or external dataset."@en.

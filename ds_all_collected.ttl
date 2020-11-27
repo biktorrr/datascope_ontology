@@ -220,7 +220,7 @@ dsx:selection15sel01ds2 a dsont:Dataset ;
  rdfs:label "Tweets"; 
  dsont:source "Twitter"; 
  dsont:has_selection_criteria "Users in dataset1 having made more than 30 tweets including either food-left or food-right keywords";
- dsont:extraction_method "REST API: user_timeline";
+ dsont:has_extraction_method "REST API: user_timeline";
  dsont:has_language "Japanese".
  
 dsx:selection16sel01	dsont:has_dataset 	dsx:selection16sel01ds2 . 
@@ -235,7 +235,7 @@ dsx:selection18sel01	dsont:has_dataset 	dsx:selection18sel01ds2 .
 dsx:selection18sel01ds2 a dsont:Dataset ; 
  rdfs:label "Twitter corpus "; 
  dsont:source "Twitter"; 
- dsont:extraction_method "Twitter API".
+ dsont:has_extraction_method "Twitter API".
 		
 dsx:selection20sel01	dsont:has_dataset 	dsx:selection20sel01ds2 .
 
